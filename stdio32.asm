@@ -44,7 +44,7 @@ printStr:
 ; ================imprimir cadena con salto de linea==============
 ; void printStrLn(eax = cadena)
 ; imprime la cadena en pantalla seguida por la impresion de un salto de linea
-printStrLn
+printStrLn:
 	call	printStr
 	push	eax
 	mov 	eax, 0Ah
@@ -83,10 +83,34 @@ printLoop:
 	pop 	edx
 	pop		ecx
 	pop 	eax
+	ret	
+
+strca:
+	push	ebx 
+	push	eax 
+	mov 	ebx, eax
+
+inpStr:
+	push 	edx
+	push	ecx
+	push	ebx
+	push	eax
+
+	mov	edx, eax
+	mov	ecx, ebx
+	mov	ebx, 0
+	mov	eax, 3
+	int	80h
+
+	pop 	eax
+	pop	ebx
+	pop	ecx
+	pop 	edx
 	ret
 
+
 ; ============Imprimir entero con salto de linea ==============
-printIntLn
+printIntLn:
 	call 	printInt
 	push	eax
 	mov 	eax, 0Ah
