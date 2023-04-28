@@ -1,6 +1,6 @@
 ; Dennys
 ; Multtiplicacion ciclica
-; Ejercicio 2
+; Ejercicio # 2 
 %include 'stdio32.asm'
 
 section .data
