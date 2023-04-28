@@ -1,3 +1,6 @@
+; Dennys
+; Llenar espacio en blanco con un punto '.'
+
 %include 'stdio32.asm'
 
 SECTION .data
